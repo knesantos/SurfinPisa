@@ -1,0 +1,98 @@
+/* src/components/OrderForm.css */
+
+.order-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.order-card {
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: none;
+    background-color: #fefefe;
+    transition: transform 0.2s;
+}
+
+.order-card:hover {
+    transform: scale(1.02);
+}
+
+.order-success .alert {
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+/* Estilos para el modal */
+.custom-modal .modal-content {
+    background-color: var(--secondary-color); /* Fondo acorde al color secundario */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.custom-modal .modal-header {
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-modal .modal-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.custom-modal .modal-body {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--highlight-color);
+}
+
+.custom-modal .modal-message {
+    margin-top: 10px;
+    color: var(--font-color);
+}
+
+.custom-modal .modal-footer {
+    border-top: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Botones del modal */
+.continue-button {
+    background-color: var(--accent-color);
+    color: var(--highlight-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border-radius: 8px;
+}
+
+.continue-button:hover {
+    background-color: var(--highlight-color);
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.view-orders-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border-radius: 8px;
+}
+
+.view-orders-button:hover {
+    background-color: #d62828;
+    transform: scale(1.05);
+}

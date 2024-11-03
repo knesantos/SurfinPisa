@@ -1,0 +1,82 @@
+/* src/components/NavigationBar.css */
+
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0; /* Para asegurar que se extienda desde el borde izquierdo */
+    width: 100%; /* Ocupar todo el ancho de la pantalla */
+    z-index: 10;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(-100%); /* Oculta la barra inicialmente */
+    opacity: 0;
+}
+
+.navigation-bar.visible {
+    transform: translateY(0); /* Muestra la barra al hacer scroll */
+    opacity: 1;
+}
+
+.navigation-bar.hidden {
+    transform: translateY(-100%); /* Oculta la barra */
+    opacity: 0;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Permite que los botones se acomoden en varias líneas si no hay suficiente espacio */
+}
+
+.nav-button {
+    background-color: var(--secondary-color);
+    color: var(--highlight-color);
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 auto; /* Hace que los botones se distribuyan en el espacio disponible */
+}
+
+.nav-button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px); /* Añade un pequeño efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:active {
+    transform: scale(0.98);
+}
+
+/* Opcional: Ajustes de responsividad */
+@media (max-width: 768px) {
+    .nav-buttons {
+        gap: 10px; /* Reduce el espacio entre botones en pantallas pequeñas */
+    }
+
+    .nav-button {
+        padding: 8px 16px; /* Reduce el tamaño de los botones en pantallas pequeñas */
+    }
+}
