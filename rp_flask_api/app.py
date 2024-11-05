@@ -1,12 +1,11 @@
-# app.py
 import config
 from flask import render_template
 from models import Person
 import people
-from flask_cors import CORS  # Importa CORS
+from flask_cors import CORS
 
 app = config.connex_app
-CORS(app.app)  # Habilita CORS para todas las rutas de la aplicación
+CORS(app.app)
 
 app.add_api(config.basedir / "swagger.yml")
 
